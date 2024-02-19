@@ -1,0 +1,10 @@
+import numpy as np
+
+def count_trees(forest):
+    unique_trees, counts = np.unique(forest, return_counts=True)
+    return dict(zip(unique_trees, counts))
+
+# Example usage:
+forest = ["oak", "pine", "oak", "maple", "birch", "oak"]
+tree_counts = count_trees(forest)
+print("Tree counts in the forest:", tree_counts)
